@@ -1,8 +1,11 @@
 package org.gerdoc;
 
 public class Estado {
+
     private int id;
     private String nombre;
+
+    public Estado(){}
 
     public Estado(int id, String nombre) {
         this.id = id;

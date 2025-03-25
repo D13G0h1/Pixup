@@ -6,6 +6,8 @@ public class Colonia {
     private String cp;
     private int idMunicipio;
 
+    public Colonia(){}
+
     public Colonia(int id, String nombre, String cp, int idMunicipio) {
         this.id = id;
         this.nombre = nombre;

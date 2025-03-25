@@ -5,6 +5,8 @@ public class Municipio {
     private String nombre;
     private int idEstado;
 
+    public Municipio(){}
+
     public Municipio(int id, String nombre, int idEstado) {
         this.id = id;
         this.nombre = nombre;
