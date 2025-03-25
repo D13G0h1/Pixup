@@ -1,4 +1,4 @@
-package org.gerdoc;
+package org.gerdoc.registro;
 
 public class Colonia {
     private int id;

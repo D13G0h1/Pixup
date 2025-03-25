@@ -1,4 +1,4 @@
-package org.gerdoc;
+package org.gerdoc.registro;
 
 public class Municipio {
     private int id;

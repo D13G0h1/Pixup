@@ -1,4 +1,4 @@
-package org.gerdoc;
+package org.gerdoc.registro;
 
 public class Estado {
 
