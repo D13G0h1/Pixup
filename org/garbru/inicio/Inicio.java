@@ -1,0 +1,37 @@
+package org.garbru.inicio;
+
+import org.garbru.registro.TipoEjecutable;
+import org.garbru.util.ReadUtil;
+import org.garbru.vista.Menu;
+
+public class Inicio {
+
+    public Inicio() {    }
+
+    public static void main(String[] args)
+    {
+        boolean flag = true;
+        int opcion = 0;
+        TipoEjecutable tipoEjecutable = null;
+        while( flag )
+        {
+            Menu.principal2( );
+            Menu.seleccionaOpcion( );
+            opcion = ReadUtil.readInt( );
+            tipoEjecutable = TipoEjecutable.getTipoEjecutableById( opcion );
+            if( TipoEjecutable.SALIR.equals( tipoEjecutable ) )
+            {
+                flag = false;
+            }
+            if( TipoEjecutable.OPCION_ERRONEA.equals( tipoEjecutable ) )
+            {
+                Menu.opcionInvalida( );
+            }
+            if( tipoEjecutable.getEjecutable( ) != null )
+            {
+                tipoEjecutable.getEjecutable( ).run( );
+            }
+        }
+
+    }
+}
