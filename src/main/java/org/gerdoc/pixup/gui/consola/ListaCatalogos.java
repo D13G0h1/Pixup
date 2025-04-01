@@ -25,7 +25,8 @@ public class ListaCatalogos extends LecturaAccion
         System.out.println( "1.-Estado");
         System.out.println( "2.-Municipio");
         System.out.println( "3.-Colonia");
-        System.out.println( "4.-Salir");
+        System.out.println( "4.-Artista");
+        System.out.println( "5.-Salir");
     }
     @Override
     public int valorMinMenu()
@@ -36,7 +37,7 @@ public class ListaCatalogos extends LecturaAccion
     @Override
     public int valorMaxMenu()
     {
-        return 4;
+        return 5;
     }
 
     @Override
@@ -52,11 +53,15 @@ public class ListaCatalogos extends LecturaAccion
                 System.out.println( "No implementado" );
                 break;
             case 3:
-                System.out.println( "No implementado" );
+                System.out.println( "No implementada" );
+                break;
+            case 4:
+                ejecutable = ArtistaCatalogo.getInstance();
                 break;
         }
-        ejecutable.setFlag( true );
-        ejecutable.run( );
-
+        if(ejecutable != null){
+            ejecutable.setFlag( true );
+            ejecutable.run( );
+        }
     }
 }
